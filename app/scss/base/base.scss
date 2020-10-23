@@ -1,0 +1,87 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	background: $color-white;
+	font-family: $font-base;
+    font-size: $font-base-size;
+    font-weight: $font-weight-normal;
+	line-height: $font-base-lineheight;
+	color: $color-mine-mhaft;
+    width: 100%;
+    margin: 0;
+}
+
+.page {
+    min-width: 320px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.main {
+
+}
+
+.container {
+	max-width: $container;
+	margin: 0 auto;
+	width: 100%;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.dark {
+	color: $color-white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+a {
+	color: inherit;
+    //transition: all .3s;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+    margin: 0;
+    position: relative;
+
+	& li {
+		position: relative;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+img,
+svg {
+	max-width: 100%;
+	vertical-align: top;
+}
+
+table {
+	border-collapse: collapse;
+	table-layout: fixed;
+    width: 100%;
+}

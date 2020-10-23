@@ -1,0 +1,11 @@
+mixin footer(data)
+	//- модификатор
+	+modif('footer', data.mod)
+
+	//- префикс
+	+prefix('footer', data.prefix)
+
+	//- атрибуты
+	- attr = data.attr || ''
+
+	footer(class=`footer${pr}${mod}`)&attributes(attr)

@@ -1,0 +1,30 @@
+.header {
+	position: relative;
+	padding: 23px 0px 40px;
+	z-index: 100;
+	margin-bottom: 6px;
+
+	&__row {
+		display: flex;
+		align-items: center;
+
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__nav {
+		font-family: $font-sanspro;
+		font-size: 20px;
+		line-height: 25px;
+		margin-left: auto;
+	}
+
+	&__search {
+		margin-left: auto;
+	}
+
+	&__logo {
+		margin-right: 70px;
+	}
+}

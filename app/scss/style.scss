@@ -1,0 +1,13 @@
+// style in all page
+@import '../../node_modules/normalize.css/normalize.css';
+
+@import 'config/variables';
+@import 'config/mixins';
+@import 'config/extend';
+@import 'config/utilities';
+
+@import 'base/**/*';
+
+@import 'ui/**/*';
+
+@import '../components/**/*.scss'

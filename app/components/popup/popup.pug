@@ -1,0 +1,11 @@
+mixin popup(data)
+	//- модификатор
+	+modif('popup', data.mod)
+
+	//- префикс
+	+prefix('popup', data.prefix)
+
+	//- атрибуты
+	- attr = data.attr || ''
+
+	div(class=`popup${pr}${mod}`)&attributes(attr)

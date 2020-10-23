@@ -1,0 +1,34 @@
+mixin menu(data)
+	//- модификатор
+	+modif('menu', data.mod)
+
+	//- префикс
+	+prefix('menu', data.prefix)
+
+	//- атрибуты
+	- attr = data.attr || {"data-menu": ""}
+
+	nav(class=`menu${pr}${mod}`)&attributes(attr)
+		+nav(data, pr, mod)
+
+//- вложенное меню
+mixin nav(data, pr, mod)
+	if (mod != '')
+		- mod = `--${mod}`
+
+	ul(class=`menu${pr}__list${mod}`)
+		each item in data.list
+
+			li(class=`menu${pr}__item${mod}`)
+				a(href= item.href class=`menu${pr}__link${mod}` class= item.class)&attributes(item.attr)
+					if (item.icon)
+						i(class=`menu${pr}__icon${mod} icon icon--${item.icon}`)
+
+					if (item.text)
+						span(class=`menu${pr}__text${mod}`)= item.text
+
+				if (item.list)
+					div(class=`menu${pr}__nav`)
+						if (item.back)
+							a(class=`menu${pr}__back` data-menu-back)= item.back
+						+nav(item, pr, item.mod)

@@ -1,0 +1,83 @@
+.menu {
+	margin-left: auto;
+	margin-right: 55px;
+	padding-bottom: 4px;
+
+	&__list {
+		display: flex;
+		align-items: center;
+
+		font-size: 24px;
+		line-height: 24px;
+		font-weight: bold;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 70px;
+		}
+	}
+}
+
+.menu-header {
+	&__list {
+		display: flex;
+		align-items: center;
+
+		font-family: $font-sanspro;
+		font-size: 20px;
+		line-height: 25px;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 40px;
+		}
+	}
+
+	&__link {
+		color: $color-mine-mhaft;
+	}
+}
+
+.menu-header-info {
+	&__list {
+		display: flex;
+		align-items: center;
+
+		font-family: $font-sanspro;
+		font-size: 20px;
+		line-height: 25px;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 40px;
+		}
+	}
+
+	&__link {
+		color: $color-mine-mhaft;
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		&--drop {
+			&:after {
+				content: '';
+				background-image: svg-load('../assets/images/svg/arrow.svg', fill=transparent);
+				height: 7px;
+				width: 12px;
+				background-repeat: no-repeat;
+				background-position: center 0;
+				background-size: contain;
+				margin-right: -4px;
+    			margin-left: 7px;
+			}
+		}
+	}
+
+	&__icon {
+		margin-right: 14px;
+	}
+}

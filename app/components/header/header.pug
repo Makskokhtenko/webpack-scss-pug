@@ -1,0 +1,106 @@
+mixin header(data)
+	//- модификатор
+	+modif('header', data.mod)
+
+	//- префикс
+	+prefix('header', data.prefix)
+
+	//- атрибуты
+	- attr = data.attr || ''
+
+	header(class=`header`)&attributes(attr)
+		.container
+			div(class=`header__row`)
+				+menu({
+					prefix: 'header',
+					list: [
+						{
+							text: 'О нас',
+							href: 'about.html'
+						},
+						{
+							text: 'Блог',
+							href: 'blog.html'
+						},
+						{
+							text: 'Арендаторам',
+							href: 'tenant.html'
+						},
+						{
+							text: 'Рекламодателям',
+							href: 'advertiser.html'
+						}
+					]
+				})
+
+				div(class=`header__nav`)
+					+menu({
+						prefix: 'header-info',
+						list: [
+							{
+								text: '10:00 - 22:00',
+								href: '#',
+								icon: 'time',
+								class: 'menu-header-info__link--drop'
+							},
+							{
+								text: '8 843 000 00 00',
+								href: 'tel:88430000000',
+								icon: 'phone'
+							},
+							{
+								text: 'Как добраться',
+								href: '#',
+								icon: 'way'
+							},
+							{
+								text: 'Схема этажей',
+								href: '#',
+								icon: 'scheme'
+							},
+							{
+								text: 'En',
+								href: '#'
+							}
+						]
+					})
+
+			div(class=`header__row`)
+				a(href='#' class=`header__logo`)
+					+img('required/logo.svg', `lazyload`)
+
+				+menu({
+					list: [
+						{
+							text: 'События',
+							href: 'events.html'
+						},
+						{
+							text: 'Акции',
+							href: 'promotions.html'
+						},
+						{
+							text: 'Магазины',
+							href: 'shops.html'
+						},
+						{
+							text: 'Фуд-корт',
+							href: 'food-court.html'
+						},
+						{
+							text: 'Развлечения',
+							href: 'entertainment.html'
+						},
+						{
+							text: 'Кинотеатр Imax',
+							href: 'imax.html'
+						},
+						{
+							text: 'Услуги',
+							href: 'services.html'
+						}
+					]
+				})
+
+				div(class=`header__search`)
+					i.icon.icon--search
