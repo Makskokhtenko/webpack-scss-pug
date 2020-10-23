@@ -1,2 +1,2 @@
 # webpack-scss-pug
-webpack-scss-pug build syste,
+webpack-scss-pug build system
